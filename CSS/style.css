@@ -1,0 +1,320 @@
+.menu{
+    background-color: white;
+    border-radius: 70px;
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 5px;
+    font-family: var(--font);
+    z-index: 999;
+    transition: all 0.3s;
+}
+.menu nav{
+    width: 73%;
+}
+.menu nav ul
+{
+    width: 100%;
+    justify-content: space-between;
+}
+
+.menu nav a{
+    font-size: 14px !important;
+}
+.menu nav a:hover{
+    color: var(--color-one) !important;
+}
+.menu #icon-menu{
+    display: none;
+}
+.menu #icon-menu:checked + label span{
+
+    border: 0 ;
+}
+.menu #icon-menu:checked + label span::before{
+
+    transform: rotate(45deg);
+    top: -1px;
+
+}
+.menu #icon-menu:checked + label span::after{
+
+    transform: rotate(-45deg);
+    bottom: -1px;
+}
+
+.menu label{
+     padding: 10px;
+     display: none;
+}
+.menu label span{
+    display: block !important;
+    width: 35px;
+    border: 2px solid black;
+    position: relative;
+    
+}
+.menu label span::before,label span::after{
+    content: " ";
+    position: absolute;
+    left: -1px;
+    width: 30px;
+    border: 1px solid black;
+    transition: all 0.2s;
+}
+.menu label span::before{
+    top: -12px;
+}
+.menu label span::after{
+    bottom: -12px;
+}
+
+@media screen and (max-width: 1200px){
+    .menu{
+        border-radius: 40px;
+        flex-wrap: wrap;
+
+    }
+    .menu nav{
+        width: 100%;
+        display: none;
+    }
+    .menu nav ul{
+        flex-direction: column !important;
+        text-align: center;
+    }
+    .menu nav ul li{
+        border-top: 1px solid #ddddddb9;
+        padding: 5px;
+    }
+    .menu nav ul li:hover{
+        background-color: #eeeeee;
+    }
+    .menu nav ul li:hover a{
+        color: black !important;
+    }
+    .menu label{
+        display: block;
+    }
+    .menu #icon-menu:checked + label + nav{
+        display: block;
+    }
+}
+
+
+/* banner1  */
+.banner1{
+    height: 100vh;
+    background-image: url(https://templatemo.com/templates/templatemo_535_softy_pinko/assets/images/banner-bg.png);
+    background-size: cover;
+    background-position: center;
+}
+.banner1 .content{
+    max-width: 550px;
+}
+.banner1 .content h1{
+    line-height: 60px;
+    margin-bottom: 40px;
+}
+.banner1 .content p{
+    margin-bottom: 40px;
+}
+.banner1 .content button{
+    background-color: var(--color-one);
+    border: 0;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.2s;
+}.banner1 .content button:hover
+{
+    background-color: var(--color-two);
+}
+.banner1 .content button a{
+    color: white !important;
+    font-size: 15px;
+}
+/* end banner1  */
+
+/* section1 */
+.section1{
+    margin-top: -170px;
+    
+}
+.section1 .inner-box{
+    box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.10);
+}
+.section1 .inner-box:hover .inner-img{
+    background-color: var(--color-one);
+}
+.section1 .inner-img{
+    display: inline-block;
+    background-color: var(--color-two);
+    border-radius: 50%;
+    padding: 20px;
+    margin-bottom: 30px;
+    transition: all 0.2s;
+}
+
+.section1 h5{
+    margin-bottom: 20px;
+}
+.section1 p{
+    color: var(--color-text-2);
+    font-size: 15px;
+}
+
+/* end section1 */
+
+/* section2 */
+.section2{
+    margin-top: 100px;
+}
+
+
+/* end section2 */
+
+/* section4 */
+.section4{
+    background-image: url(https://templatemo.com/templates/templatemo_535_softy_pinko/assets/images/work-process-bg.png);
+    padding: 90px 0;
+}
+.section4 .inner-content .inner-box{
+    padding: 30px 20px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s;
+}
+.section4 .inner-content .inner-box:hover{
+    transform: translateY(-10px);
+}
+.section4 .inner-content .inner-box::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    right: -15px;
+    bottom: -15px;
+    z-index: -1;
+    opacity: 20%;
+    border-radius: 15px;
+}
+
+
+/* end section4 */
+/* section5 */
+
+.section5 h2{
+    margin-bottom: 30px;
+}
+.section5 p{
+    letter-spacing: 0.7px;
+    line-height: 26px;
+}
+.section5 .user-infor p{
+    color: var(--color-one);
+}
+.section5 .inner-box .user-infor h5,p{
+    transition: all 0.25s;
+}
+.section5 .inner-box:hover .user-infor h5{
+    margin-left: 15px;
+}
+.section5 .inner-box:hover .user-infor p{
+    margin-left: 15px;
+}
+/* end section5 */
+
+
+/* section6 */
+.section6{
+    background-color: #f2f2fe;
+}
+.section6 .inner-box .box-price{
+    background-color: var(--color-two);
+    padding-top: 27px;
+    padding-bottom: 1px;
+    border-radius: 20px;
+}
+.section6 button{
+    background-color: var(--color-two);
+    border: 0;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.2s;
+}
+.section6 button:hover
+{
+    background-color: var(--color-one);
+}
+.section6 button a{
+    color: white !important;
+    font-size: 15px;
+}
+/* end section6 */
+/* section7 */
+.section7{
+    background-image: url(https://templatemo.com/templates/templatemo_535_softy_pinko/assets/images/fun-facts-bg.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section7 .inner-box .inner-items{
+    position: relative;
+
+
+}
+.section7 .inner-box .inner-items p,h1{
+    transition: all 0.3s ease 0s;
+}
+.section7 .inner-box .inner-items:hover h1{
+    transform: translateY(-20px);
+}
+.section7 .inner-box .inner-items:hover p{
+    transform: translateY(-20px);
+}
+.section7 .inner-box .inner-items:first-child::after,.inner-items:nth-child(3):after{
+    content: "";
+    background: url(https://templatemo.com/templates/templatemo_535_softy_pinko/assets/images/circle-dec.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 62px;
+    height: 19px;
+    top: 50%;
+    right: -40px;
+
+}
+.section7 .inner-box .inner-items:nth-child(2):after{
+    content: "";
+    background: url(https://templatemo.com/templates/templatemo_535_softy_pinko/assets/images/circle-dec.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 62px;
+    height: 19px;
+    top: 20%;
+    right: -40px;
+}
+@media (max-width:992px) {
+    .section7 .inner-box .inner-items:first-child::after,.inner-items:nth-child(3):after{
+        content:none;
+    }
+    .section7 .inner-box .inner-items:nth-child(2):after{
+        content:none;
+    }
+}
+
+
+
+/* end section7 */
